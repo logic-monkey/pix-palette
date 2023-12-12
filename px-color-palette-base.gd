@@ -1,0 +1,2 @@
+extends PXColorBASE
+class_name PXColorPaletteBASE
