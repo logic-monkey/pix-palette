@@ -1,3 +1,4 @@
+@tool
 extends PXColorBASE
 class_name PXColor
 
@@ -7,6 +8,7 @@ var color : Color = Color.BLACK:
 		return _cb
 	set(value):
 		_cb = value
+		emit_changed()
 
 @export
 var luminance : float = 1.0:
@@ -14,3 +16,4 @@ var luminance : float = 1.0:
 		return _l
 	set(value):
 		_l = value
+		emit_changed()
