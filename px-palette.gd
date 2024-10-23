@@ -14,6 +14,13 @@ var color0: PXColorBASE:
 			color0.data_changed.connect(_on_color_changed)
 		signal_change()
 @export
+var rb_0: Rainboy.rb:
+	get:
+		return rb_0
+	set(value):
+		rb_0 = value
+		signal_change()
+@export
 var color1: PXColorBASE:
 	get:
 		return color1
@@ -23,6 +30,13 @@ var color1: PXColorBASE:
 		color1 = value
 		if value:
 			color1.data_changed.connect(_on_color_changed)
+		signal_change()
+@export
+var rb_1: Rainboy.rb:
+	get:
+		return rb_1
+	set(value):
+		rb_1 = value
 		signal_change()
 @export
 var color2: PXColorBASE:
@@ -36,6 +50,13 @@ var color2: PXColorBASE:
 			color2.data_changed.connect(_on_color_changed)
 		signal_change()
 @export
+var rb_2: Rainboy.rb:
+	get:
+		return rb_2
+	set(value):
+		rb_2 = value
+		signal_change()
+@export
 var color3: PXColorBASE:
 	get:
 		return color3
@@ -45,6 +66,13 @@ var color3: PXColorBASE:
 		color3 = value
 		if value:
 			color3.data_changed.connect(_on_color_changed)
+		signal_change()
+@export
+var rb_3: Rainboy.rb:
+	get:
+		return rb_3
+	set(value):
+		rb_3 = value
 		signal_change()
 @export
 var color4: PXColorBASE:
@@ -58,6 +86,13 @@ var color4: PXColorBASE:
 			color4.data_changed.connect(_on_color_changed)
 		signal_change()
 @export
+var rb_4: Rainboy.rb:
+	get:
+		return rb_4
+	set(value):
+		rb_4 = value
+		signal_change()
+@export
 var color5: PXColorBASE:
 	get:
 		return color5
@@ -67,6 +102,13 @@ var color5: PXColorBASE:
 		color5 = value
 		if value:
 			color5.data_changed.connect(_on_color_changed)
+		signal_change()
+@export
+var rb_5: Rainboy.rb:
+	get:
+		return rb_5
+	set(value):
+		rb_5 = value
 		signal_change()
 @export
 var color6: PXColorBASE:
@@ -80,6 +122,13 @@ var color6: PXColorBASE:
 			color6.data_changed.connect(_on_color_changed)
 		signal_change()
 @export
+var rb_6: Rainboy.rb:
+	get:
+		return rb_6
+	set(value):
+		rb_6 = value
+		signal_change()
+@export
 var color7: PXColorBASE:
 	get:
 		return color7
@@ -90,7 +139,13 @@ var color7: PXColorBASE:
 		if value:
 			color7.data_changed.connect(_on_color_changed)
 		signal_change()
-			
+@export
+var rb_7: Rainboy.rb:
+	get:
+		return rb_7
+	set(value):
+		rb_7 = value
+		signal_change()
 signal palette_changed
 func _on_color_changed():
 	palette_changed.emit()

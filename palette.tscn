@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmg1w4mk6fat4"]
+
+[ext_resource type="Material" uid="uid://ddsyy31drwfwa" path="res://addons/pix-palette/pixel_palette_material.tres" id="1_23mfh"]
+[ext_resource type="Theme" uid="uid://cuph7xutnw7nw" path="res://addons/pix-ui/pixel_theme.tres" id="2_x4t5v"]
+[ext_resource type="Texture2D" uid="uid://cbbmpk3uo3jh" path="res://addons/pix-palette/palette examiner.png" id="3_jtyxv"]
+[ext_resource type="Script" path="res://addons/pix-palette/px-palette.gd" id="4_637sy"]
+[ext_resource type="Script" path="res://addons/pix-palette/display-palette.gd" id="4_uo3o8"]
+
+[sub_resource type="Resource" id="Resource_uabct"]
+resource_local_to_scene = true
+script = ExtResource("4_637sy")
+rb_0 = 0
+rb_1 = 0
+rb_2 = 0
+rb_3 = 0
+rb_4 = 0
+rb_5 = 0
+rb_6 = 0
+rb_7 = 0
+
+[node name="palette" type="Control"]
+material = ExtResource("1_23mfh")
+custom_minimum_size = Vector2(128, 36)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -512.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_x4t5v")
+script = ExtResource("4_uo3o8")
+palette = SubResource("Resource_uabct")
+
+[node name="texture" type="TextureRect" parent="."]
+use_parent_material = true
+layout_mode = 2
+offset_right = 128.0
+offset_bottom = 36.0
+texture = ExtResource("3_jtyxv")
+stretch_mode = 2
+
+[node name="name" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 640.0
+offset_bottom = 8.0
+text = "palette 0001"

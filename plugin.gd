@@ -13,7 +13,9 @@ func _enter_tree():
 	EditorInterface.get_editor_settings().set_project_metadata("color_picker", "presets", new_picker_presets)
 	plugin = preload("res://addons/pix-palette/editor-inspecter-plugin.gd").new()
 	add_inspector_plugin(plugin)
+	add_autoload_singleton("_PAL", "res://addons/pix-palette/palettes.tscn")
 
 
 func _exit_tree():
 	remove_inspector_plugin(plugin)
+	remove_autoload_singleton("_PAL")

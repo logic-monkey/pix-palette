@@ -17,3 +17,8 @@ static var colors = \
 			FG_BLACK, FG_DARK, FG_LIGHT, FG_WHITE,
 			BG_BLACK, BG_DARK, BG_LIGHT, BG_WHITE
 		]
+enum rb \
+	{
+		FG_Black, FG_Dark, FG_Light, FG_White,
+		BG_Black, BG_Dark, BG_Light, BG_White
+	}
