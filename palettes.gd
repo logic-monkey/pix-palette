@@ -1,6 +1,10 @@
 extends CanvasLayer
 
 var palettes := {}
+var is_viz := false
+
+func _ready() -> void:
+	%ui.modulate = Color.TRANSPARENT
 
 func register_palette(title:String, colors: PXPixelPalette)->PIXEL_PAL:
 	if title in palettes: 
@@ -24,8 +28,15 @@ func delete_palette(title:String):
 		p.queue_free()
 		
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("cheat") and Input.is_action_just_pressed("c_toggle_rainboy"):
-		rainboy_on = !rainboy_on
+	if Input.is_action_pressed("cheat"):
+		if Input.is_action_just_pressed("c_toggle_rainboy"):
+			rainboy_on = !rainboy_on
+		if Input.is_action_just_pressed("c_show_palettes"):
+			is_viz = !is_viz
+			var c = Color.WHITE if is_viz else Color.TRANSPARENT
+			var tw = create_tween()
+			tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+			tw.tween_property(%ui, "modulate", c, 0.25)
 
 var rainboy_amt : float :
 	get: return PIXEL_PAL.rainboy

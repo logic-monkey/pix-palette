@@ -8,7 +8,8 @@ process_mode = 3
 layer = 127
 script = ExtResource("1_xltlx")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="ui" type="MarginContainer" parent="."]
+unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,22 +22,22 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ui"]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="ui/VBoxContainer"]
 layout_mode = 2
 text = "Palettes:"
 horizontal_alignment = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="ui/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 horizontal_scroll_mode = 0
 
-[node name="pal_list" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="pal_list" type="VBoxContainer" parent="ui/VBoxContainer/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10

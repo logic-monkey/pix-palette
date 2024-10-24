@@ -18,7 +18,7 @@ uniform float noise_speed = 0.5;
 
 void fragment() {
 	vec4 tex = texture(TEXTURE, UV);
-	COLOR.a = tex.a;
+	//COLOR.a = tex.a;
 	
 		//setup
 	const vec4 mask_0 = vec4(1.0, 0.0, 1.0, 1.0);
@@ -75,4 +75,10 @@ void fragment() {
 	color = mix(color, palette_7, float(color_a == mask_7));
 	
 	COLOR.rgb = mix(color.rgb, color_to_mix.rgb, mix_amount);
+	//COLOR.a = color.a;
+}
+
+void light()
+{
+	
 }

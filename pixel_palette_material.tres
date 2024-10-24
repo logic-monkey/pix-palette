@@ -1,21 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ddsyy31drwfwa"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ddsyy31drwfwa"]
 
 [ext_resource type="Shader" path="res://addons/pix-palette/pixel_palette_material.gdshader" id="1_vj2ea"]
-[ext_resource type="Texture2D" uid="uid://bgven7kalwfni" path="res://addons/pix-palette/noise texture.png" id="2_fsa7h"]
 
 [resource]
 resource_local_to_scene = true
 shader = ExtResource("1_vj2ea")
-shader_parameter/color_to_mix = null
-shader_parameter/mix_amount = 0.0
-shader_parameter/palette_0 = Color(1, 0, 1, 1)
-shader_parameter/palette_1 = Color(1, 0, 0, 1)
-shader_parameter/palette_2 = Color(0, 1, 1, 1)
-shader_parameter/palette_3 = Color(0, 0, 1, 1)
-shader_parameter/palette_4 = Color(0, 1, 0, 1)
-shader_parameter/palette_5 = Color(1, 1, 0, 1)
-shader_parameter/palette_6 = Color(1, 1, 1, 1)
-shader_parameter/palette_7 = Color(0, 0, 0, 1)
-shader_parameter/noise_mix = 0.0
-shader_parameter/noise_speed = 0.5
-shader_parameter/noise_img = ExtResource("2_fsa7h")
