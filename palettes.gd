@@ -28,6 +28,7 @@ func delete_palette(title:String):
 		p.queue_free()
 		
 func _process(delta: float) -> void:
+	if not InputMap.has_action("cheat"): return
 	if Input.is_action_pressed("cheat"):
 		if Input.is_action_just_pressed("c_toggle_rainboy"):
 			rainboy_on = !rainboy_on
