@@ -5,6 +5,8 @@ var is_viz := false
 
 func _ready() -> void:
 	%ui.modulate = Color.TRANSPARENT
+	await get_tree().process_frame
+	rainboy_on = false
 
 func register_palette(title:String, colors: PXPixelPalette)->PIXEL_PAL:
 	if title in palettes: 
@@ -45,7 +47,7 @@ var rainboy_amt : float :
 		PIXEL_PAL.rainboy = v
 		for pal in palettes:
 			palettes[pal][0].palette_changed()
-var rainboy_on : bool = false:
+var rainboy_on : bool = true:
 	set(v): 
 		rainboy_on = v
 		var delta_val = 1 if rainboy_on else 0
