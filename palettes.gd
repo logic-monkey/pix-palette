@@ -45,7 +45,7 @@ var rainboy_amt : float :
 		PIXEL_PAL.rainboy = v
 		for pal in palettes:
 			palettes[pal][0].palette_changed()
-var rainboy_on : bool = true:
+var rainboy_on : bool = false:
 	set(v): 
 		rainboy_on = v
 		var delta_val = 1 if rainboy_on else 0
