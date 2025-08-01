@@ -32,9 +32,9 @@ func delete_palette(title:String):
 func _process(delta: float) -> void:
 	if not InputMap.has_action("cheat"): return
 	if Input.is_action_pressed("cheat"):
-		if Input.is_action_just_pressed("c_toggle_rainboy"):
+		if InputMap.has_action("c_toggle_rainboy") and Input.is_action_just_pressed("c_toggle_rainboy"):
 			rainboy_on = !rainboy_on
-		if Input.is_action_just_pressed("c_show_palettes"):
+		if InputMap.has_action("c_show_palettes") and Input.is_action_just_pressed("c_show_palettes"):
 			is_viz = !is_viz
 			var c = Color.WHITE if is_viz else Color.TRANSPARENT
 			var tw = create_tween()
